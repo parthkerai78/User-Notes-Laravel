@@ -14,11 +14,18 @@
         <h3>{{ $note->title }}</h3>
         <p>{{ $note->description }}</p>
 
-        <form action="{{ route('notes.destroy', $note->id)}}" method="POST">
-            @csrf
-            @method('DELETE')
-            <button>Delete</button>
-        </form>
+        <div style="display:flex; gap:10px;">
+            <a href="{{ route('notes.edit', $note->id) }}">
+                <button>Edit</button>
+            </a>
+            
+            <form action="{{ route('notes.destroy', $note->id)}}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button>Delete</button>
+            </form>
+        </div>
+        
     @endforeach
 </body>
 </html>
