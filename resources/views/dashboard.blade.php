@@ -3,6 +3,10 @@
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
             {{ __('Dashboard') }}
         </h2>
+
+        <a href="{{ route('notes.index') }}" 
+            style="padding:10px 20px; background:blue; color:white; text-decoration:none; border-radius:5px;">
+            My Notes
     </x-slot>
 
     <div class="py-12">
