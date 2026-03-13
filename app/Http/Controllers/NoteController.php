@@ -34,7 +34,7 @@ class NoteController extends Controller
         ]);
 
         auth()->user()->notes()->create($request->all());
-
+        return redirect()->route('notes.index');
 
     }
 
